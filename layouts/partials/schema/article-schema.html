@@ -1,48 +1,18 @@
 <script type="application/ld+json">
-{{/* 字段预处理区域 */}}
-
-{{ $headline := .Title | plainify | trim " " }}
-{{ if not $headline }}{{ $headline = "Untitled" }}{{ end }}
-
-{{ $desc := .Params.description | default (.Summary) | plainify | trim " " }}
-{{ if not $desc }}{{ $desc = "No description available." }}{{ end }}
-
-{{ $body := .Content | plainify | trim " " }}
-{{ if not $body }}{{ $body = "No article body available." }}{{ end }}
-
-{{ $author := .Params.author | plainify | trim " " }}
-{{ if not $author }}{{ $author = "BaoLiba" }}{{ end }}
-
-{{ $lang := .Params.language | plainify | trim " " }}
-{{ if not $lang }}{{ $lang = "en" }}{{ end }}
-
-{{ $country := .Params.country | plainify | trim " " }}
-{{ if not $country }}{{ $country = "Global" }}{{ end }}
-
-{{ $image := .Params.featuredImage | default "https://baoliba.com/logo.png" | trim " " }}
-{{ if not $image }}{{ $image = "https://baoliba.com/logo.png" }}{{ end }}
-
-{{ $keywords := delimit (apply (.Params.keywords | default (slice)) "plainify" ".") ", " }}
-{{ if not $keywords }}{{ $keywords = "Influencer, Marketing, Social Media" }}{{ end }}
-
-{{ $categories := .Params.categories | default "Marketing" | plainify | trim " " }}
-{{ $id := .Permalink | trim " " }}
-{{ if not $id }}{{ $id = "https://baoliba.com/" }}{{ end }}
-
 {
   "@context": "https://schema.org",
   "@type": "Article",
 
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": {{ $id | printf "%q" }}
+    "@id": {{ .Permalink | default "https://baoliba.com/" | printf "%q" }}
   },
 
-  "headline": {{ $headline | jsonify }},
-  "description": {{ $desc | jsonify }},
-  "articleBody": {{ $body | jsonify }},
-  "keywords": {{ $keywords | jsonify }},
-  "articleSection": {{ $categories | jsonify }},
+  "headline": {{ .Title | default "Untitled" | jsonify }},
+  "description": {{ .Params.description | default (.Summary | default "No description available.") | jsonify }},
+  "articleBody": {{ .Content | default "No article body available." | jsonify }},
+  "keywords": {{ delimit (.Params.keywords | default (slice "Influencer" "Marketing" "Social Media")) ", " | jsonify }},
+  "articleSection": {{ .Params.categories | default "Marketing" | jsonify }},
 
   "datePublished": "{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}",
   "dateModified": "{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}",
@@ -50,7 +20,7 @@
   "author": [
     {
       "@type": "Organization",
-      "name": {{ $author | jsonify }},
+      "name": "BaoLiba",
       "url": "https://baoliba.com"
     }
   ],
@@ -66,13 +36,13 @@
   },
 
   "image": [
-    {{ $image | printf "%q" }},
-    {{ $image | printf "%q" }},
-    {{ $image | printf "%q" }}
+    {{ (.Params.featuredImage | default "https://baoliba.com/logo.png") | printf "%q" }},
+    {{ (.Params.featuredImage | default "https://baoliba.com/logo.png") | printf "%q" }},
+    {{ (.Params.featuredImage | default "https://baoliba.com/logo.png") | printf "%q" }}
   ],
 
-  "inLanguage": {{ $lang | jsonify }},
-  "countryOfOrigin": {{ $country | jsonify }},
+  "inLanguage": {{ .Params.language | default "en" | jsonify }},
+  "countryOfOrigin": {{ .Params.country | default "Global" | jsonify }},
   "about": "Social Media Platform Marketing Strategies Worldwide",
   "name": "Social Media Marketing Guide"
 }
