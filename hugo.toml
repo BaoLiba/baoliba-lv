@@ -1,0 +1,103 @@
+# =========================
+# ✅ 每个站点都必须定制的字段（拉脱维亚本地化版本）
+# =========================
+baseURL = "/"
+languageCode = "lv"
+languageName = "Latviešu"
+defaultContentLanguage = "lv"
+title = "BaoLiba 🇱🇻"
+theme = "LoveIt"
+author = "BaoLiba"
+
+[params]
+  authorName = "BaoLiba"
+
+  # ✅ SEO 设置（拉脱维亚本地化标题 + 描述 + 关键词）
+  title = "BaoLiba - Savieno Latvijas influencerus ar pasaules zīmoliem"
+  description = "BaoLiba ir globāla ietekmētāju platforma, kas palīdz Latvijas zīmoliem un satura veidotājiem sadarboties ar starptautiskiem partneriem."
+  keywords = ["influenceru mārketings", "BaoLiba", "globāli satura veidotāji", "e-komercija", "Latvija"]
+
+  # ✅ 顶部 Logo（本地语言展示）
+  [params.header.title]
+    name = "BaoLiba - Savieno Latvijas influencerus ar pasaules zīmoliem"
+    pre = ""
+    post = ""
+    typeit = false
+
+  # ✅ 应用外观（PWA）
+  [params.app]
+    title = "BaoLiba 🇱🇻"
+    svgFavicon = "favicon.png"
+    noFavicon = false
+    themeColor = "#ffffff"
+    iconColor = "#5bbad5"
+    tileColor = "#da532c"
+
+  # ✅ 样式控制
+  defaultTheme = "light"
+  disableThemeSwitch = true
+  customCSS = ["css/extended.css"]
+
+  # ✅ 站点图标
+  [params.assets]
+    favicon = "/favicon.png"
+
+  # ✅ 页脚内容（链接统一，保留英文）
+  [params.footer]
+    enable = true
+    hugo = false
+    author = false
+    copyright = false
+    since = 2025
+    custom = '''
+    <div class="footer-links">
+      <a href="https://baoliba.com/" target="_blank" rel="noopener">BaoLiba</a> |
+      <a href="/about/">About</a> |
+      <a href="/privacy-policy/">Privacy Policy</a> |
+      <a href="/terms-of-use/">Terms of Use</a> |
+      <a href="/contact-us/">Contact Us</a>
+    </div>
+    '''
+
+  # ✅ 页面设置
+  [params.page]
+    author = false
+    layout = "post"
+
+# =========================
+# ✅ 通用配置（保留不变）
+# =========================
+defaultContentLanguageInSubdir = false
+enableRobotsTXT = true
+canonifyURLs = true
+uglyURLs = false
+
+[markup.highlight]
+  noClasses = false
+
+[frontmatter]
+  format = "yaml"
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+[sitemap]
+  changefreq = "monthly"
+  priority = 0.5
+  filename = "sitemap.xml"
+
+[menu]
+  [[menu.main]]
+    identifier = "posts"
+    name = "Raksti"
+    url = "/posts/"
+    weight = 1
+
+  [[menu.main]]
+    identifier = "tags"
+    name = "Tagi"
+    url = "/tags/"
+    weight = 2
+
+
+
