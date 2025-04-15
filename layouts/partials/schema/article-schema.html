@@ -1,5 +1,5 @@
 <script type="application/ld+json">
-{{/* 平台到内容类型的映射字典 */}}
+{{/* ✅ 平台到内容类型的映射字典 */}}
 {{ $platformTypes := dict
   "YouTube" "video-guide"
   "TikTok" "shortform-strategy"
@@ -13,21 +13,26 @@
   "Pinterest" "visual-discovery-guide"
 }}
 
-{{/* 选取主平台（优先第一个）并获取内容类型 */}}
+{{/* ✅ 获取主平台（platforms[0]），无则默认 YouTube */}}
 {{ $mainPlatform := index (.Params.platforms | default (slice "YouTube")) 0 }}
 {{ $contentType := index $platformTypes $mainPlatform | default "influencer-guide" }}
+
+{{/* ✅ 安全获取 featuredImage，避免 Hugo 编译失败 */}}
+{{ $image := .Params.featuredImage | default "https://baoliba.com/logo.png" }}
 
 {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": {{ .Title | jsonify }},
+  "headline": {{ .Title | default "Untitled" | plainify | jsonify }},
   "description": {{ .Params.description | default (.Summary | plainify) | jsonify }},
   "datePublished": "{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}",
   "dateModified": "{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}",
+
   "author": {
     "@type": "Organization",
     "name": {{ .Params.author | default "BaoLiba" | jsonify }}
   },
+
   "publisher": {
     "@type": "Organization",
     "name": "BaoLiba",
@@ -36,15 +41,18 @@
       "url": "https://baoliba.com/logo.png"
     }
   },
-  "image": {{ .Params.featuredImage | default "https://baoliba.com/logo.png" | jsonify }},
+
+  "image": {{ $image | jsonify }},
   "articleBody": {{ .Content | plainify | jsonify }},
   "keywords": {{ delimit (.Params.keywords | default (slice)) ", " | jsonify }},
   "articleSection": {{ .Params.categories | default "" | jsonify }},
+
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": "{{ .Permalink }}"
   },
-  "inLanguage": "{{ .Params.language | default "lv" }}",
+
+  "inLanguage": {{ .Params.language | default "lv" | jsonify }},
   "countryOfOrigin": {{ .Params.country | default "Latvia" | jsonify }},
   "about": {{ delimit (.Params.platforms | default (slice "YouTube")) ", " | jsonify }},
   "name": {{ $contentType | jsonify }}
