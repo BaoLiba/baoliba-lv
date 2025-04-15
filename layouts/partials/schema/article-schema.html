@@ -1,5 +1,5 @@
 <script type="application/ld+json">
-{{/* 平台映射 → 类型标识 */}}
+{{/* 平台 → 内容类型映射 */}}
 {{ $platformTypes := dict
   "YouTube" "video-guide"
   "TikTok" "shortform-strategy"
@@ -13,30 +13,29 @@
   "Pinterest" "visual-discovery-guide"
 }}
 
-{{/* 多语言类型名称 */}}
+{{/* 多语言名称映射 */}}
 {{ $translatedTypes := dict
-  "video-guide" (dict "en" "Video Guide" "lv" "Video ceļvedis" "zh" "视频指南")
-  "shortform-strategy" (dict "en" "Shortform Strategy" "lv" "Īso video stratēģija" "zh" "短视频策略")
-  "visual-marketing-guide" (dict "en" "Visual Marketing Guide" "lv" "Vizuālā mārketinga ceļvedis" "zh" "视觉营销指南")
-  "ads-optimization-handbook" (dict "en" "Ads Optimization Handbook" "lv" "Reklāmu optimizācijas rokasgrāmata" "zh" "广告优化手册")
-  "community-engagement" (dict "en" "Community Engagement" "lv" "Kopienas iesaiste" "zh" "社区互动指南")
-  "microblog-playbook" (dict "en" "Microblog Playbook" "lv" "Mikrobloga rokasgrāmata" "zh" "微博营销指南")
-  "b2b-outreach-guide" (dict "en" "B2B Outreach Guide" "lv" "B2B sasniedzamības ceļvedis" "zh" "B2B拓展指南")
-  "youth-marketing" (dict "en" "Youth Marketing" "lv" "Jauniešu mārketings" "zh" "年轻人营销")
-  "discussion-growth" (dict "en" "Forum Growth Guide" "lv" "Diskusiju izaugsme" "zh" "社区增长指南")
-  "visual-discovery-guide" (dict "en" "Visual Discovery Guide" "lv" "Vizuālās izpētes ceļvedis" "zh" "视觉探索指南")
-  "social-media-marketing" (dict "en" "Social Media Marketing" "lv" "Sociālo mediju mārketings" "zh" "社交媒体营销")
+  "video-guide" (dict "en" "Video Guide" "lv" "Video ceļvedis")
+  "shortform-strategy" (dict "en" "Shortform Strategy" "lv" "Īso video stratēģija")
+  "visual-marketing-guide" (dict "en" "Visual Marketing Guide" "lv" "Vizuālā mārketinga ceļvedis")
+  "ads-optimization-handbook" (dict "en" "Ads Optimization Handbook" "lv" "Reklāmu optimizācijas rokasgrāmata")
+  "community-engagement" (dict "en" "Community Engagement" "lv" "Kopienas iesaiste")
+  "microblog-playbook" (dict "en" "Microblog Playbook" "lv" "Mikrobloga rokasgrāmata")
+  "b2b-outreach-guide" (dict "en" "B2B Outreach Guide" "lv" "B2B sasniedzamības ceļvedis")
+  "youth-marketing" (dict "en" "Youth Marketing" "lv" "Jauniešu mārketings")
+  "discussion-growth" (dict "en" "Forum Growth Guide" "lv" "Diskusiju izaugsme")
+  "visual-discovery-guide" (dict "en" "Visual Discovery Guide" "lv" "Vizuālās izpētes ceļvedis")
+  "social-media-marketing" (dict "en" "Social Media Marketing" "lv" "Sociālo mediju mārketings")
 }}
 
-{{/* 内容类型映射与 fallback */}}
+{{/* 平台 → 类型名称 */}}
 {{ $mainPlatform := index (.Params.platforms | default (slice "YouTube")) 0 }}
 {{ $baseType := index $platformTypes $mainPlatform | default "social-media-marketing" }}
-{{ $lang := (.Params.language | plainify | trim " ") }}
-{{ if not $lang }}{{ $lang = "lv" }}{{ end }}
+{{ $lang := .Params.language | default "lv" }}
 {{ $contentTypeMap := index $translatedTypes $baseType }}
 {{ $contentType := index $contentTypeMap $lang | default (index $contentTypeMap "en") | default "Social Media Marketing" }}
 
-{{/* 字段变量预处理 */}}
+{{/* ✅ 关键字段变量预处理 */}}
 {{ $headline := .Title | plainify | trim " " }}
 {{ if not $headline }}{{ $headline = "Untitled" }}{{ end }}
 
@@ -48,37 +47,22 @@
 
 {{ $author := .Params.author | plainify | trim " " }}
 {{ if not $author }}{{ $author = "BaoLiba" }}{{ end }}
-
-{{ $country := .Params.country | plainify | trim " " }}
-{{ if not $country }}{{ $country = "Latvia" }}{{ end }}
-
-{{ $categories := .Params.categories | default "Marketing" | plainify | trim " " }}
-{{ $about := delimit (.Params.platforms | default (slice "YouTube")) ", " | plainify | trim " " }}
-{{ if not $about }}{{ $about = "YouTube" }}{{ end }}
-
 {{ $image := .Params.featuredImage | default "https://baoliba.com/logo.png" | trim " " }}
-{{ if not $image }}{{ $image = "https://baoliba.com/logo.png" }}{{ end }}
 
-{{ $keywords := delimit (apply (.Params.keywords | default (slice)) "plainify" ".") ", " }}
-{{ if not $keywords }}{{ $keywords = "Influencer,Marketing" }}{{ end }}
-
-{{ $id := .Permalink | trim " " }}
-{{ if not $id }}{{ $id = "https://baoliba.com/" }}{{ end }}
-  
 {
   "@context": "https://schema.org",
   "@type": "Article",
 
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": {{ $id | printf "%q" }}
+    "@id": {{ .Permalink | printf "%q" }}
   },
 
   "headline": {{ $headline | jsonify }},
   "description": {{ $desc | jsonify }},
   "articleBody": {{ $body | jsonify }},
-  "keywords": {{ $keywords | jsonify }},
-  "articleSection": {{ $categories | jsonify }},
+  "keywords": {{ delimit (apply (.Params.keywords | default (slice "Marketing")) "plainify" ".") ", " | jsonify }},
+  "articleSection": {{ .Params.categories | default "Marketing" | plainify | trim " " | jsonify }},
 
   "datePublished": "{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}",
   "dateModified": "{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}",
@@ -93,7 +77,7 @@
     "name": "BaoLiba",
     "logo": {
       "@type": "ImageObject",
-      "url": {{ "https://baoliba.com/logo.png" | printf "%q" }}
+      "url": "https://baoliba.com/logo.png"
     }
   },
 
@@ -102,10 +86,9 @@
     "url": {{ $image | printf "%q" }}
   },
 
-  "inLanguage": {{ $lang | jsonify }},
-  "countryOfOrigin": {{ $country | jsonify }},
-  "about": {{ $about | jsonify }},
+  "inLanguage": {{ .Params.language | default "lv" | jsonify }},
+  "countryOfOrigin": {{ .Params.country | default "Latvia" | jsonify }},
+  "about": {{ delimit (.Params.platforms | default (slice "YouTube")) ", " | jsonify }},
   "name": {{ $contentType | jsonify }}
 }
 </script>
-
