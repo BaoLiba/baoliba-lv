@@ -13,16 +13,17 @@
   "Pinterest" "visual-discovery-guide"
 }}
 
-{{/* ✅ 获取主平台（platforms[0]），无则默认 YouTube */}}
+{{/* ✅ 主平台 fallback（第一个平台）+ 内容类型匹配 */}}
 {{ $mainPlatform := index (.Params.platforms | default (slice "YouTube")) 0 }}
 {{ $contentType := index $platformTypes $mainPlatform | default "influencer-guide" }}
 
-{{/* ✅ 安全获取 featuredImage，避免 Hugo 编译失败 */}}
+{{/* ✅ 安全 featuredImage 注入（无则默认） */}}
 {{ $image := .Params.featuredImage | default "https://baoliba.com/logo.png" }}
 
 {
   "@context": "https://schema.org",
   "@type": "Article",
+
   "headline": {{ .Title | default "Untitled" | plainify | jsonify }},
   "description": {{ .Params.description | default (.Summary | plainify) | jsonify }},
   "datePublished": "{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}",
@@ -42,7 +43,11 @@
     }
   },
 
-  "image": {{ $image | jsonify }},
+  "image": {
+    "@type": "ImageObject",
+    "url": {{ $image | printf "%q" }}
+  },
+
   "articleBody": {{ .Content | plainify | jsonify }},
   "keywords": {{ delimit (.Params.keywords | default (slice)) ", " | jsonify }},
   "articleSection": {{ .Params.categories | default "" | jsonify }},
