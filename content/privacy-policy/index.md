@@ -1,32 +1,40 @@
 ---
-title: "TPrivacy Policy"
+title: "Privātuma politika"
 date: 2025-03-31
 draft: false
 ---
 
-**Privacy Policy**
+**Privātuma politika**
 
-Last updated: [March 2025]
+Pēdējo reizi atjaunināts: [2025. gada marts]
 
-This blog is operated by BaoLiba. We respect your privacy and are committed to keeping this site simple and transparent.
+Šo vietni pārvalda **BaoLiba**. Mēs cienām jūsu privātumu un apņemamies nodrošināt vienkāršu un caurspīdīgu pieredzi.
 
-**1. What we collect**
+---
 
-We do not collect personal data directly.  
-We do not offer login, comment, or registration features.
+**1. Kādu informāciju mēs apkopojam**
 
-However, we may use third-party services such as Google Analytics to help understand traffic behavior. These services may use cookies or anonymized IP tracking.
+Mēs tieši nevācam personīgos datus.  
+Mūsu vietnē nav pieteikšanās, komentāru vai reģistrācijas funkciju.
 
-**2. Cookies**
+Tomēr mēs varam izmantot trešo pušu pakalpojumus, piemēram, **Google Analytics**, lai analizētu vietnes apmeklējumu plūsmas. Šie pakalpojumi var izmantot sīkfailus vai anonimizētu IP izsekošanu.
 
-Some pages may use cookies via third-party plugins or embedded media (e.g., videos, maps).  
-You can disable cookies in your browser settings.
+---
 
-**3. External links**
+**2. Sīkfaili (Cookies)**
 
-Our site may contain links to other websites. We are not responsible for their privacy practices.
+Dažas lapas var izmantot sīkfailus, izmantojot trešo pušu spraudņus vai iegultos multivides elementus (piemēram, video, kartes).  
+Jūs varat atspējot sīkfailus savā pārlūkprogrammas iestatījumos.
 
-**4. Contact**
+---
 
-If you have any questions, feel free to contact us at: info@baoliba.com
+**3. Ārējās saites**
 
+Mūsu vietnē var būt saites uz citām tīmekļa vietnēm. Mēs neatbildam par šo vietņu privātuma praksi.
+
+---
+
+**4. Saziņa**
+
+Jautājumu gadījumā lūdzu rakstiet uz:  
+📧 **info@baoliba.com**
