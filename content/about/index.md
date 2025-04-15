@@ -1,80 +1,81 @@
 ---
-title: "About Us"
+title: "Par mums"
 date: 2025-03-31
 draft: false
 ---
 
-# 🌟 Welcome to BaoLiba
+# 🌟 Laipni lūdzam BaoLiba
 
-Hi! I’m **MaTiTie**, founder of BaoLiba — a global influencer marketing platform designed to make cross-border collaborations **safer, faster, and easier** for brands and creators worldwide.
-
----
-
-# 🚀 Why BaoLiba?
-
-In the era of digital marketing, working across borders is full of opportunities — but also challenges:
-
-- 📌 **Brands** struggle to verify influencers and enforce agreements  
-- 📌 **Creators** face delayed payments and unclear contracts
-
-**BaoLiba bridges that trust gap.** We offer a secure, transparent, and results-focused platform where brands and creators collaborate confidently.
+Sveiki! Esmu **MaTiTie**, **BaoLiba** dibinātājs — globāla ietekmētāju mārketinga platforma, kas padara pārrobežu sadarbību **drošāku, ātrāku un vienkāršāku** gan zīmoliem, gan satura veidotājiem visā pasaulē.
 
 ---
 
-# 🔒 What BaoLiba Offers
+# 🚀 Kāpēc BaoLiba?
 
-✅ **Safe & Verified Transactions**  
-Every project is backed by contracts, dispute protection, and on-time payments.
+Digitālā mārketinga laikmetā starptautiskā sadarbība sniedz lielas iespējas — bet arī daudz risku:
 
-✅ **A Global Network of Brands & Influencers** 🌍  
-We connect creators and companies from over 50 countries — no matter your market, we’ve got trusted local partners.
+- 📌 **Zīmoliem** grūti pārbaudīt influencētājus un nodrošināt līgumu izpildi  
+- 📌 **Satura veidotājiem** bieži kavē maksājumus, nav skaidru sadarbības noteikumu
 
-✅ **Hassle-Free Cross-Border Payments** 💳  
-No hidden fees. No currency chaos. We handle the heavy lifting so you don’t have to.
-
-✅ **A Thriving Creator Community** 🤝  
-BaoLiba is more than a platform. It’s a global community to learn, grow, and win together.
+**BaoLiba aizpilda šo uzticības plaisu.**  
+Mēs piedāvājam drošu, caurspīdīgu un uz rezultātu vērstu platformu, kur zīmoli un influenceri var sadarboties ar pārliecību.
 
 ---
 
-# 🌏 Our Vision: A Borderless Influencer Marketing Ecosystem
+# 🔒 Ko piedāvā BaoLiba?
 
-We believe in **openness, transparency, and collaboration**.
+✅ **Droši un pārbaudīti darījumi**  
+Katru projektu pavada līgums, strīdu aizsardzība un garantēti savlaicīgi maksājumi.
 
-BaoLiba breaks down barriers for:
+✅ **Globāls zīmolu un influencētāju tīkls** 🌍  
+Mēs savienojam partnerus vairāk nekā 50 valstīs — lai kur arī būtu jūsu tirgus, mums ir uzticami vietējie kontakti.
 
-- 🚀 Startups going global  
-- 🏢 Enterprises scaling digital campaigns  
-- 🎥 Creators expanding internationally  
+✅ **Vienkārši pārrobežu maksājumi** 💳  
+Bez slēptām komisijām. Bez valūtas haosa. Mēs paveicam grūto darbu jūsu vietā.
 
----
-
-# 🎯 Our Mission
-
-- ✅ Simplify and secure global brand-creator partnerships  
-- ✅ Empower businesses and influencers to grow internationally  
-- ✅ Build long-term, trust-based collaborations
-
-We're constantly evolving our tools and services to make influencer marketing more **fair, impactful, and scalable**.
+✅ **Augoša satura veidotāju kopiena** 🤝  
+BaoLiba ir vairāk nekā platforma — tā ir globāla kopiena, kur mācīties, augt un uzvarēt kopā.
 
 ---
 
-# 📊 The Future of Influencer Marketing
+# 🌏 Mūsu redzējums: Bezrobežu ietekmētāju mārketinga ekosistēma
 
-As eCommerce and social platforms grow, influencer marketing is no longer optional — it’s **essential** for global success.
+Mēs ticam **atvērtībai, caurspīdīgumam un sadarbībai**.
 
-Whether you’re a local brand or a creator ready to go international, **BaoLiba is your shortcut to real influence that converts.**
+BaoLiba nojauc šķēršļus:
 
----
-
-# 🤝 Join the BaoLiba Movement
-
-Are you a brand, agency, or content creator?
-
-**This is your sign.**  
-Let’s connect, collaborate, and create something global together.
-
+- 🚀 Jaunuzņēmumiem, kas vēlas iekarot pasauli  
+- 🏢 Uzņēmumiem, kas mēro savas digitālās kampaņas  
+- 🎥 Satura veidotājiem, kas vēlas paplašināt savu ietekmi starptautiski  
 
 ---
 
-_“In this business, creators build the trust. We just help brands scale it.”_ ✨
+# 🎯 Mūsu misija
+
+- ✅ Vienkāršot un padarīt drošākas globālās sadarbības  
+- ✅ Palīdzēt uzņēmumiem un influenceriem augt starptautiskā līmenī  
+- ✅ Veidot ilgtermiņa attiecības, kas balstītas uzticībā
+
+Mēs nepārtraukti attīstām savus rīkus un pakalpojumus, lai padarītu ietekmētāju mārketingu **taisnīgāku, efektīvāku un mērogojamu**.
+
+---
+
+# 📊 Ietekmētāju mārketinga nākotne
+
+eKomercijai un sociālajiem tīkliem augot, ietekmētāju mārketings vairs nav izvēles iespēja — tas ir **nepieciešams**, lai gūtu panākumus globāli.
+
+Vai jūs esat vietējais zīmols vai satura veidotājs, kurš gatavs iekarot pasauli —  
+**BaoLiba** ir jūsu īsākais ceļš uz ietekmi, kas patiešām **pārdo**.
+
+---
+
+# 🤝 Pievienojieties BaoLiba kustībai
+
+Vai esat zīmols, aģentūra vai satura veidotājs?
+
+**Šī ir jūsu zīme.**  
+Sazināsimies, sadarbojamies un kopā veidojam kaut ko patiešām globālu.
+
+---
+
+_“Šajā biznesā uzticību veido influenceri. Mēs vienkārši palīdzam zīmoliem to mērogot.”_ ✨
