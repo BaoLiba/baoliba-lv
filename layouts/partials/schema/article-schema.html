@@ -28,25 +28,22 @@
   "social-media-marketing" (dict "en" "Social Media Marketing" "lv" "Sociālo mediju mārketings" "zh" "社交媒体营销")
 }}
 
-{{/* ✅ 平台和语言判断 */}}
 {{ $mainPlatform := index (.Params.platforms | default (slice "YouTube")) 0 }}
-{{ $baseType := index $platformTypes $mainPlatform }}
-{{ if not $baseType }}{{ $baseType = "social-media-marketing" }}{{ end }}
+{{ $baseType := index $platformTypes $mainPlatform | default "social-media-marketing" }}
 
-{{ $lang := .Params.language | default "lv" | plainify | trim }}
+{{ $lang := (.Params.language | default "lv" | plainify | trim " ") }}
 {{ $contentTypeMap := index $translatedTypes $baseType }}
-{{ $contentType := index $contentTypeMap $lang | default (index $contentTypeMap "en") | default "Social Media Marketing" }}
+{{ $contentType := (index $contentTypeMap $lang | default (index $contentTypeMap "en") | default "Social Media Marketing") }}
 
-{{/* ✅ 字段处理 */}}
-{{ $headline := .Title | plainify | trim | default "Untitled" }}
-{{ $desc := .Params.description | default (.Summary | plainify) | trim | default "No description available." }}
-{{ $body := .Content | plainify | trim | default "No article body available." }}
-{{ $author := .Params.author | plainify | trim | default "BaoLiba" }}
-{{ $country := .Params.country | plainify | trim | default "Latvia" }}
-{{ $categories := .Params.categories | default "Marketing" | plainify | trim }}
-{{ $about := delimit (.Params.platforms | default (slice "YouTube")) ", " | plainify | trim | default "YouTube" }}
-{{ $image := .Params.featuredImage | default "https://baoliba.com/logo.png" }}
-{{ $keywords := delimit (apply (.Params.keywords | default (slice)) "plainify" ".") ", " }}
+{{ $headline := (.Title | plainify | trim " " | default "Untitled") }}
+{{ $desc := (.Params.description | default (.Summary | plainify) | trim " " | default "No description available.") }}
+{{ $body := (.Content | plainify | trim " " | default "No article body available.") }}
+{{ $author := (.Params.author | plainify | trim " " | default "BaoLiba") }}
+{{ $country := (.Params.country | plainify | trim " " | default "Latvia") }}
+{{ $categories := (.Params.categories | default "Marketing" | plainify | trim " ") }}
+{{ $about := (delimit (.Params.platforms | default (slice "YouTube")) ", " | plainify | trim " " | default "YouTube") }}
+{{ $image := (.Params.featuredImage | default "https://baoliba.com/logo.png") }}
+{{ $keywords := (delimit (apply (.Params.keywords | default (slice)) "plainify" ".") ", ") }}
 
 {
   "@context": "https://schema.org",
