@@ -1,59 +1,60 @@
 ---
-title: "Terms of Use"
+title: "Lietošanas noteikumi"
 date: 2025-03-31
 draft: false
 ---
 
-# Terms of Use
+# Lietošanas noteikumi
 
-_Last updated: March 2025_
+_Pēdējo reizi atjaunināts: 2025. gada marts_
 
-Welcome to BaoLiba! By accessing and using this website, you agree to the following terms:
-
----
-
-### 1. Content Usage
-
-Unless otherwise stated, all content on this website (including articles, images, and data) is created and shared by BaoLiba.  
-We believe in an open, free, and collaborative internet.  
-
-You are welcome to reference, share, or adapt our content—**as long as it’s done respectfully and within the boundaries of applicable laws** (such as proper attribution and non-commercial use, where required).
-
-If you're unsure or plan to use our content for commercial purposes, we kindly ask that you contact us first.
+Laipni lūdzam **BaoLiba**! Izmantojot šo vietni, jūs piekrītat šiem noteikumiem:
 
 ---
 
-### 2. No Warranty
+### 1. Satura izmantošana
 
-All content provided on this site is for informational purposes only.  
-We do not guarantee the accuracy, completeness, or fitness for any particular purpose.  
-Users access and use this website at their own risk.
+Ja vien nav norādīts citādi, viss saturs šajā vietnē (ieskaitot rakstus, attēlus un datus) ir radīts un kopīgots ar **BaoLiba** komandas starpniecību.  
+Mēs ticam atvērtam, brīvam un sadarbībā balstītam internetam.
 
----
+Jūs esat laipni aicināti atsaukties uz mūsu saturu, to kopīgot vai pielāgot —  
+**ja tas tiek darīts cieņpilni un ievērojot spēkā esošos likumus** (piemēram, norādot autoru un neizmantojot komerciāli, ja nepieciešams).
 
-### 3. External Links
-
-Some pages may contain links to third-party websites or embedded content (e.g. YouTube, social media).  
-We are not responsible for the content, privacy policies, or practices of any third-party websites.
+Ja neesat pārliecināts vai plānojat izmantot saturu komerciāliem nolūkiem, lūdzu, vispirms sazinieties ar mums.
 
 ---
 
-### 4. Changes to Terms
+### 2. Garantiju neesamība
 
-We may update these terms at any time without prior notice.  
-Please check this page periodically to stay informed.
-
----
-
-### 5. Credits & Acknowledgements
-
-This website is proudly built with [HUGO](https://gohugo.io/), using the free [LoveIt](https://themes.gohugo.io/themes/loveit/) theme.  
-Images are sourced from [Pexels](https://pexels.com), and article content is developed with the assistance of [ChatGPT](https://openai.com/chatgpt).  
-We are grateful for these amazing open tools and communities.
+Visa informācija šajā vietnē tiek sniegta tikai informatīviem nolūkiem.  
+Mēs negarantējam satura precizitāti, pilnību vai atbilstību konkrētam mērķim.  
+Vietnes lietošana notiek uz jūsu pašu atbildību.
 
 ---
 
-### 6. Contact
+### 3. Ārējās saites
 
-If you have any questions or concerns about these terms, please contact us at: **info@baoliba.com**
+Dažās lapās var būt saites uz trešo pušu vietnēm vai iegults saturs (piemēram, YouTube video, sociālie tīkli).  
+Mēs neuzņemamies atbildību par šo vietņu saturu, privātuma politikām vai darbībām.
 
+---
+
+### 4. Noteikumu izmaiņas
+
+Mēs paturam tiesības jebkurā laikā veikt izmaiņas šajos lietošanas noteikumos bez iepriekšēja brīdinājuma.  
+Lūdzu, regulāri pārbaudiet šo lapu, lai būtu informēts.
+
+---
+
+### 5. Atzinības un pateicība
+
+Šī vietne ir veidota, izmantojot [HUGO](https://gohugo.io/) un bezmaksas [LoveIt](https://themes.gohugo.io/themes/loveit/) tēmu.  
+Attēli iegūti no [Pexels](https://pexels.com), un rakstu saturs veidots ar [ChatGPT](https://openai.com/chatgpt) palīdzību.  
+Mēs esam pateicīgi šīm lieliskajām atvērtajām kopienām un rīkiem.
+
+---
+
+### 6. Saziņa
+
+Ja jums ir kādi jautājumi vai neskaidrības par šiem noteikumiem, lūdzu, rakstiet uz:  
+📧 **info@baoliba.com**
