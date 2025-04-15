@@ -1,5 +1,5 @@
 <script type="application/ld+json">
-{{/* ✅ 平台到内容类型的映射字典 */}}
+{{/* ✅ 平台 → 内容类型 映射表（英文 key） */}}
 {{ $platformTypes := dict
   "YouTube" "video-guide"
   "TikTok" "shortform-strategy"
@@ -13,11 +13,29 @@
   "Pinterest" "visual-discovery-guide"
 }}
 
-{{/* ✅ 主平台 fallback（第一个平台）+ 内容类型匹配 */}}
-{{ $mainPlatform := index (.Params.platforms | default (slice "YouTube")) 0 }}
-{{ $contentType := index $platformTypes $mainPlatform | default "influencer-guide" }}
+{{/* ✅ 内容类型翻译表（支持多语言） */}}
+{{ $translatedTypes := dict
+  "video-guide" (dict "en" "Video Guide" "lv" "Video ceļvedis" "zh" "视频指南")
+  "shortform-strategy" (dict "en" "Shortform Strategy" "lv" "Īso video stratēģija" "zh" "短视频策略")
+  "visual-marketing-guide" (dict "en" "Visual Marketing Guide" "lv" "Vizuālā mārketinga ceļvedis" "zh" "视觉营销指南")
+  "ads-optimization-handbook" (dict "en" "Ads Optimization Handbook" "lv" "Reklāmu optimizācijas rokasgrāmata" "zh" "广告优化手册")
+  "community-engagement" (dict "en" "Community Engagement" "lv" "Kopienas iesaiste" "zh" "社区互动指南")
+  "microblog-playbook" (dict "en" "Microblog Playbook" "lv" "Mikrobloga rokasgrāmata" "zh" "微博营销指南")
+  "b2b-outreach-guide" (dict "en" "B2B Outreach Guide" "lv" "B2B sasniedzamības ceļvedis" "zh" "B2B拓展指南")
+  "youth-marketing" (dict "en" "Youth Marketing" "lv" "Jauniešu mārketings" "zh" "年轻人营销")
+  "discussion-growth" (dict "en" "Forum Growth Guide" "lv" "Diskusiju izaugsme" "zh" "社区增长指南")
+  "visual-discovery-guide" (dict "en" "Visual Discovery Guide" "lv" "Vizuālās izpētes ceļvedis" "zh" "视觉探索指南")
+  "social-media-marketing" (dict "en" "Social Media Marketing" "lv" "Sociālo mediju mārketings" "zh" "社交媒体营销")
+}}
 
-{{/* ✅ 安全 featuredImage 注入（无则默认） */}}
+{{/* ✅ 平台识别 + 内容类型映射 + 多语翻译 */}}
+{{ $mainPlatform := index (.Params.platforms | default (slice "YouTube")) 0 }}
+{{ $baseType := cond (in (keys $platformTypes) $mainPlatform) (index $platformTypes $mainPlatform) "social-media-marketing" }}
+{{ $lang := .Params.language | default "lv" }}
+{{ $contentTypeMap := index $translatedTypes $baseType }}
+{{ $contentType := index $contentTypeMap $lang | default (index $contentTypeMap "en") | default "Social Media Marketing" }}
+
+{{/* ✅ 图片处理 */}}
 {{ $image := .Params.featuredImage | default "https://baoliba.com/logo.png" }}
 
 {
@@ -57,9 +75,10 @@
     "@id": "{{ .Permalink }}"
   },
 
-  "inLanguage": {{ .Params.language | default "lv" | jsonify }},
+  "inLanguage": {{ $lang | jsonify }},
   "countryOfOrigin": {{ .Params.country | default "Latvia" | jsonify }},
   "about": {{ delimit (.Params.platforms | default (slice "YouTube")) ", " | jsonify }},
   "name": {{ $contentType | jsonify }}
 }
 </script>
+
