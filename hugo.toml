@@ -10,6 +10,8 @@ theme = "LoveIt"
 author = "BaoLiba"                       # 设置全站默认作者，结构化用
 
 [params]
+  language: "lv"
+  country: "Latvia"
   authorName = "BaoLiba"                # 用于结构化 JSON-LD 中 fallback 显示作者名
 
   # ✅ SEO 设置（标题、描述、关键词）
