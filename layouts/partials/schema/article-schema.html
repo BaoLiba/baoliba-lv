@@ -13,7 +13,7 @@
   "Pinterest" "visual-discovery-guide"
 }}
 
-{{/* ✅ 多语言内容类型翻译表 */}}
+{{/* ✅ 内容类型翻译表 */}}
 {{ $translatedTypes := dict
   "video-guide" (dict "en" "Video Guide" "lv" "Video ceļvedis" "zh" "视频指南")
   "shortform-strategy" (dict "en" "Shortform Strategy" "lv" "Īso video stratēģija" "zh" "短视频策略")
@@ -28,14 +28,12 @@
   "social-media-marketing" (dict "en" "Social Media Marketing" "lv" "Sociālo mediju mārketings" "zh" "社交媒体营销")
 }}
 
-{{/* ✅ 主平台 */}}
+{{/* ✅ 平台内容类型识别 */}}
 {{ $mainPlatform := index (.Params.platforms | default (slice "YouTube")) 0 }}
 {{ $baseType := index $platformTypes $mainPlatform }}
-{{ if not $baseType }}
-  {{ $baseType = "social-media-marketing" }}
-{{ end }}
+{{ if not $baseType }}{{ $baseType = "social-media-marketing" }}{{ end }}
 
-{{/* ✅ 多语言匹配 */}}
+{{/* ✅ 多语言翻译逻辑 */}}
 {{ $lang := .Params.language | default "lv" }}
 {{ $contentTypeMap := index $translatedTypes $baseType }}
 {{ $contentType := "" }}
@@ -45,25 +43,23 @@
     {{ $contentType = index $contentTypeMap "en" }}
   {{ end }}
 {{ end }}
-{{ if not $contentType }}
-  {{ $contentType = "Social Media Marketing" }}
-{{ end }}
+{{ if not $contentType }}{{ $contentType = "Social Media Marketing" }}{{ end }}
 
-{{/* ✅ 封面图处理 */}}
+{{/* ✅ 图片处理 */}}
 {{ $image := .Params.featuredImage | default "https://baoliba.com/logo.png" }}
 
 {
   "@context": "https://schema.org",
   "@type": "Article",
 
-  "headline": {{ .Title | default "Untitled" | plainify | jsonify }},
-  "description": {{ .Params.description | default (.Summary | plainify) | jsonify }},
+  "headline": {{ .Title | default "Untitled" | plainify | trim | jsonify }},
+  "description": {{ .Params.description | default (.Summary | plainify) | trim | jsonify }},
   "datePublished": "{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}",
   "dateModified": "{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}",
 
   "author": {
     "@type": "Organization",
-    "name": {{ .Params.author | default "BaoLiba" | jsonify }}
+    "name": {{ (.Params.author | default "BaoLiba" | plainify | trim | jsonify) }}
   },
 
   "publisher": {
@@ -71,7 +67,7 @@
     "name": "BaoLiba",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://baoliba.com/logo.png"
+      "url": {{ "https://baoliba.com/logo.png" | printf "%q" }}
     }
   },
 
@@ -81,18 +77,18 @@
   },
 
   "articleBody": {{ .Content | plainify | jsonify }},
-  "keywords": {{ delimit (.Params.keywords | default (slice)) ", " | jsonify }},
-  "articleSection": {{ .Params.categories | default "" | jsonify }},
+  "keywords": {{ delimit (.Params.keywords | default (slice)) ", " | plainify | trim | jsonify }},
+  "articleSection": {{ .Params.categories | default "" | plainify | trim | jsonify }},
 
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "{{ .Permalink }}"
+    "@id": {{ .Permalink | printf "%q" }}
   },
 
-  "inLanguage": {{ $lang | jsonify }},
-  "countryOfOrigin": {{ .Params.country | default "Latvia" | jsonify }},
-  "about": {{ delimit (.Params.platforms | default (slice "YouTube")) ", " | jsonify }},
-  "name": {{ $contentType | jsonify }}
+  "inLanguage": {{ $lang | plainify | trim | jsonify }},
+  "countryOfOrigin": {{ .Params.country | default "Latvia" | plainify | trim | jsonify }},
+  "about": {{ delimit (.Params.platforms | default (slice "YouTube")) ", " | plainify | trim | jsonify }},
+  "name": {{ $contentType | plainify | trim | jsonify }}
 }
 </script>
 
