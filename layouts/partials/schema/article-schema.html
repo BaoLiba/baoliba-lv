@@ -1,5 +1,5 @@
 <script type="application/ld+json">
-{{/* ✅ 平台 → 内容类型 映射表（英文 key） */}}
+{{/* ✅ 平台 → 内容类型映射表 */}}
 {{ $platformTypes := dict
   "YouTube" "video-guide"
   "TikTok" "shortform-strategy"
@@ -13,7 +13,7 @@
   "Pinterest" "visual-discovery-guide"
 }}
 
-{{/* ✅ 内容类型翻译表（支持多语言） */}}
+{{/* ✅ 多语言内容类型翻译表 */}}
 {{ $translatedTypes := dict
   "video-guide" (dict "en" "Video Guide" "lv" "Video ceļvedis" "zh" "视频指南")
   "shortform-strategy" (dict "en" "Shortform Strategy" "lv" "Īso video stratēģija" "zh" "短视频策略")
@@ -28,14 +28,28 @@
   "social-media-marketing" (dict "en" "Social Media Marketing" "lv" "Sociālo mediju mārketings" "zh" "社交媒体营销")
 }}
 
-{{/* ✅ 平台识别 + 内容类型映射 + 多语翻译 */}}
+{{/* ✅ 主平台 */}}
 {{ $mainPlatform := index (.Params.platforms | default (slice "YouTube")) 0 }}
-{{ $baseType := cond (in (keys $platformTypes) $mainPlatform) (index $platformTypes $mainPlatform) "social-media-marketing" }}
+{{ $baseType := index $platformTypes $mainPlatform }}
+{{ if not $baseType }}
+  {{ $baseType = "social-media-marketing" }}
+{{ end }}
+
+{{/* ✅ 多语言匹配 */}}
 {{ $lang := .Params.language | default "lv" }}
 {{ $contentTypeMap := index $translatedTypes $baseType }}
-{{ $contentType := index $contentTypeMap $lang | default (index $contentTypeMap "en") | default "Social Media Marketing" }}
+{{ $contentType := "" }}
+{{ if $contentTypeMap }}
+  {{ $contentType = index $contentTypeMap $lang }}
+  {{ if not $contentType }}
+    {{ $contentType = index $contentTypeMap "en" }}
+  {{ end }}
+{{ end }}
+{{ if not $contentType }}
+  {{ $contentType = "Social Media Marketing" }}
+{{ end }}
 
-{{/* ✅ 图片处理 */}}
+{{/* ✅ 封面图处理 */}}
 {{ $image := .Params.featuredImage | default "https://baoliba.com/logo.png" }}
 
 {
