@@ -28,7 +28,7 @@
   "social-media-marketing" (dict "en" "Social Media Marketing" "lv" "Sociālo mediju mārketings" "zh" "社交媒体营销")
 }}
 
-{{/* ✅ 平台类型识别 */}}
+{{/* ✅ 主平台与类型识别 */}}
 {{ $mainPlatform := index (.Params.platforms | default (slice "YouTube")) 0 }}
 {{ $baseType := index $platformTypes $mainPlatform }}
 {{ if not $baseType }}{{ $baseType = "social-media-marketing" }}{{ end }}
@@ -45,10 +45,14 @@
 {{ end }}
 {{ if not $contentType }}{{ $contentType = "Social Media Marketing" }}{{ end }}
 
-{{/* ✅ 图片 fallback */}}
+{{/* ✅ 图片处理 */}}
 {{ $image := .Params.featuredImage | default "https://baoliba.com/logo.png" }}
 
-{{/* ✅ keywords 安全处理，避免空值或格式错误 */}}
+{{/* ✅ 作者字段防空处理 */}}
+{{ $author := .Params.author | plainify | trim " " }}
+{{ if not $author }}{{ $author = "BaoLiba" }}{{ end }}
+
+{{/* ✅ keywords 安全处理 */}}
 {{ $keywords := delimit (apply (.Params.keywords | default (slice)) "plainify" ".") ", " }}
 
 {
@@ -63,13 +67,15 @@
   "headline": {{ .Title | default "Untitled" | plainify | trim " " | jsonify }},
   "description": {{ .Params.description | default (.Summary | plainify) | trim " " | jsonify }},
   "articleBody": {{ .Content | plainify | trim " " | jsonify }},
+  "keywords": {{ $keywords | jsonify }},
+  "articleSection": {{ .Params.categories | default "" | plainify | trim " " | jsonify }},
 
   "datePublished": "{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}",
   "dateModified": "{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}",
 
   "author": {
     "@type": "Organization",
-    "name": {{ (.Params.author | default "BaoLiba" | plainify | trim " " | jsonify) }}
+    "name": {{ $author | jsonify }}
   },
 
   "publisher": {
@@ -86,11 +92,10 @@
     "url": {{ $image | printf "%q" }}
   },
 
-  "keywords": {{ $keywords | jsonify }},
-  "articleSection": {{ .Params.categories | default "" | plainify | trim " " | jsonify }},
   "inLanguage": {{ $lang | plainify | trim " " | jsonify }},
   "countryOfOrigin": {{ .Params.country | default "Latvia" | plainify | trim " " | jsonify }},
   "about": {{ delimit (.Params.platforms | default (slice "YouTube")) ", " | plainify | trim " " | jsonify }},
   "name": {{ $contentType | plainify | trim " " | jsonify }}
 }
 </script>
+
