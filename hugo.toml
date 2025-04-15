@@ -2,29 +2,32 @@
 # ✅ 每个站点都必须定制的字段（拉脱维亚本地化版本）
 # =========================
 baseURL = "/"
-languageCode = "lv"
-languageName = "Latviešu"
+languageCode = "lv"                      # 本站语言代码（lv = 拉脱维亚语）
+languageName = "Latviešu"               # 本地语言名称
 defaultContentLanguage = "lv"
 title = "BaoLiba 🇱🇻"
 theme = "LoveIt"
-author = "BaoLiba"
+author = "BaoLiba"                       # 设置全站默认作者，结构化用
 
 [params]
-  authorName = "BaoLiba"
+  authorName = "BaoLiba"                # 用于结构化 JSON-LD 中 fallback 显示作者名
 
-  # ✅ SEO 设置（拉脱维亚本地化标题 + 描述 + 关键词）
+  # ✅ SEO 设置（标题、描述、关键词）
   title = "BaoLiba - Savieno Latvijas influencerus ar pasaules zīmoliem"
   description = "BaoLiba ir globāla ietekmētāju platforma, kas palīdz Latvijas zīmoliem un satura veidotājiem sadarboties ar starptautiskiem partneriem."
   keywords = ["influenceru mārketings", "BaoLiba", "globāli satura veidotāji", "e-komercija", "Latvija"]
 
-  # ✅ 顶部 Logo（本地语言展示）
+  # ✅ 预设该国家 Top 平台列表（用于结构化 JSON-LD 中的 about 字段）
+  platforms = ["YouTube", "Instagram", "TikTok", "Facebook", "Telegram", "Twitter", "LinkedIn", "Snapchat", "Reddit", "Pinterest"]
+
+  # ✅ 顶部 Logo 设置（标题区域显示）
   [params.header.title]
     name = "BaoLiba - Savieno Latvijas influencerus ar pasaules zīmoliem"
     pre = ""
     post = ""
     typeit = false
 
-  # ✅ 应用外观（PWA）
+  # ✅ 应用图标 & 外观设置（PWA 支持）
   [params.app]
     title = "BaoLiba 🇱🇻"
     svgFavicon = "favicon.png"
@@ -33,16 +36,16 @@ author = "BaoLiba"
     iconColor = "#5bbad5"
     tileColor = "#da532c"
 
-  # ✅ 样式控制
+  # ✅ 自定义样式表
   defaultTheme = "light"
   disableThemeSwitch = true
   customCSS = ["css/extended.css"]
 
-  # ✅ 站点图标
+  # ✅ Favicon 图标路径
   [params.assets]
     favicon = "/favicon.png"
 
-  # ✅ 页脚内容（链接统一，保留英文）
+  # ✅ 页脚内容（全站统一结构）
   [params.footer]
     enable = true
     hugo = false
@@ -59,13 +62,13 @@ author = "BaoLiba"
     </div>
     '''
 
-  # ✅ 页面设置
+  # ✅ 页面显示控制
   [params.page]
-    author = false
+    author = false          # ❗关闭页面作者显示，仅在 JSON-LD 输出作者信息
     layout = "post"
 
 # =========================
-# ✅ 通用配置（保留不变）
+# ✅ 通用配置（全站通用，无需修改）
 # =========================
 defaultContentLanguageInSubdir = false
 enableRobotsTXT = true
@@ -89,13 +92,13 @@ uglyURLs = false
 [menu]
   [[menu.main]]
     identifier = "posts"
-    name = "Raksti"
+    name = "Raksti"        # 本地化菜单项：文章列表
     url = "/posts/"
     weight = 1
 
   [[menu.main]]
     identifier = "tags"
-    name = "Tagi"
+    name = "Tagi"          # 本地化菜单项：标签页
     url = "/tags/"
     weight = 2
 
