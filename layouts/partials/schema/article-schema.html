@@ -1,41 +1,6 @@
 <script type="application/ld+json">
-{{/* 平台 → 内容类型映射 */}}
-{{ $platformTypes := dict
-  "YouTube" "video-guide"
-  "TikTok" "shortform-strategy"
-  "Instagram" "visual-marketing-guide"
-  "Facebook" "ads-optimization-handbook"
-  "Telegram" "community-engagement"
-  "Twitter" "microblog-playbook"
-  "LinkedIn" "b2b-outreach-guide"
-  "Snapchat" "youth-marketing"
-  "Reddit" "discussion-growth"
-  "Pinterest" "visual-discovery-guide"
-}}
+{{/* 字段预处理区域 */}}
 
-{{/* 多语言名称映射 */}}
-{{ $translatedTypes := dict
-  "video-guide" (dict "en" "Video Guide" "lv" "Video ceļvedis")
-  "shortform-strategy" (dict "en" "Shortform Strategy" "lv" "Īso video stratēģija")
-  "visual-marketing-guide" (dict "en" "Visual Marketing Guide" "lv" "Vizuālā mārketinga ceļvedis")
-  "ads-optimization-handbook" (dict "en" "Ads Optimization Handbook" "lv" "Reklāmu optimizācijas rokasgrāmata")
-  "community-engagement" (dict "en" "Community Engagement" "lv" "Kopienas iesaiste")
-  "microblog-playbook" (dict "en" "Microblog Playbook" "lv" "Mikrobloga rokasgrāmata")
-  "b2b-outreach-guide" (dict "en" "B2B Outreach Guide" "lv" "B2B sasniedzamības ceļvedis")
-  "youth-marketing" (dict "en" "Youth Marketing" "lv" "Jauniešu mārketings")
-  "discussion-growth" (dict "en" "Forum Growth Guide" "lv" "Diskusiju izaugsme")
-  "visual-discovery-guide" (dict "en" "Visual Discovery Guide" "lv" "Vizuālās izpētes ceļvedis")
-  "social-media-marketing" (dict "en" "Social Media Marketing" "lv" "Sociālo mediju mārketings")
-}}
-
-{{/* 平台 → 类型名称 */}}
-{{ $mainPlatform := index (.Params.platforms | default (slice "YouTube")) 0 }}
-{{ $baseType := index $platformTypes $mainPlatform | default "social-media-marketing" }}
-{{ $lang := .Params.language | default "lv" }}
-{{ $contentTypeMap := index $translatedTypes $baseType }}
-{{ $contentType := index $contentTypeMap $lang | default (index $contentTypeMap "en") | default "Social Media Marketing" }}
-
-{{/* ✅ 关键字段变量预处理 */}}
 {{ $headline := .Title | plainify | trim " " }}
 {{ if not $headline }}{{ $headline = "Untitled" }}{{ end }}
 
@@ -47,7 +12,22 @@
 
 {{ $author := .Params.author | plainify | trim " " }}
 {{ if not $author }}{{ $author = "BaoLiba" }}{{ end }}
+
+{{ $lang := .Params.language | plainify | trim " " }}
+{{ if not $lang }}{{ $lang = "en" }}{{ end }}
+
+{{ $country := .Params.country | plainify | trim " " }}
+{{ if not $country }}{{ $country = "Global" }}{{ end }}
+
 {{ $image := .Params.featuredImage | default "https://baoliba.com/logo.png" | trim " " }}
+{{ if not $image }}{{ $image = "https://baoliba.com/logo.png" }}{{ end }}
+
+{{ $keywords := delimit (apply (.Params.keywords | default (slice)) "plainify" ".") ", " }}
+{{ if not $keywords }}{{ $keywords = "Influencer, Marketing, Social Media" }}{{ end }}
+
+{{ $categories := .Params.categories | default "Marketing" | plainify | trim " " }}
+{{ $id := .Permalink | trim " " }}
+{{ if not $id }}{{ $id = "https://baoliba.com/" }}{{ end }}
 
 {
   "@context": "https://schema.org",
@@ -55,40 +35,45 @@
 
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": {{ .Permalink | printf "%q" }}
+    "@id": {{ $id | printf "%q" }}
   },
 
   "headline": {{ $headline | jsonify }},
   "description": {{ $desc | jsonify }},
   "articleBody": {{ $body | jsonify }},
-  "keywords": {{ delimit (apply (.Params.keywords | default (slice "Marketing")) "plainify" ".") ", " | jsonify }},
-  "articleSection": {{ .Params.categories | default "Marketing" | plainify | trim " " | jsonify }},
+  "keywords": {{ $keywords | jsonify }},
+  "articleSection": {{ $categories | jsonify }},
 
   "datePublished": "{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}",
   "dateModified": "{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}",
 
-  "author": {
-    "@type": "Organization",
-    "name": {{ $author | jsonify }}
-  },
+  "author": [
+    {
+      "@type": "Organization",
+      "name": {{ $author | jsonify }},
+      "url": "https://baoliba.com"
+    }
+  ],
 
   "publisher": {
     "@type": "Organization",
     "name": "BaoLiba",
+    "url": "https://baoliba.com",
     "logo": {
       "@type": "ImageObject",
       "url": "https://baoliba.com/logo.png"
     }
   },
 
-  "image": {
-    "@type": "ImageObject",
-    "url": {{ $image | printf "%q" }}
-  },
+  "image": [
+    {{ $image | printf "%q" }},
+    {{ $image | printf "%q" }},
+    {{ $image | printf "%q" }}
+  ],
 
-  "inLanguage": {{ .Params.language | default "lv" | jsonify }},
-  "countryOfOrigin": {{ .Params.country | default "Latvia" | jsonify }},
-  "about": {{ delimit (.Params.platforms | default (slice "YouTube")) ", " | jsonify }},
-  "name": {{ $contentType | jsonify }}
+  "inLanguage": {{ $lang | jsonify }},
+  "countryOfOrigin": {{ $country | jsonify }},
+  "about": "Social Media Platform Marketing Strategies Worldwide",
+  "name": "Social Media Marketing Guide"
 }
 </script>
