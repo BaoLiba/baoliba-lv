@@ -9,9 +9,9 @@
   },
 
   "headline": {{ .Title | default "Untitled" | jsonify }},
-  "alternativeHeadline": {{ .Params.alt_title | default (.Summary | default "Marketing Tips") | jsonify }},
+  "alternativeHeadline": {{ .Params.alt_title | default (.Summary | plainify | default "Marketing Tips") | jsonify }},
   "description": {{ .Params.description | default (.Summary | default "No description available.") | jsonify }},
-  "articleBody": {{ .Content | default "No article body available." | jsonify }},
+  "articleBody": {{ .Content | plainify | default "No article body available." | jsonify }},
   "keywords": {{ delimit (.Params.keywords | default (slice "Influencer" "Marketing" "Social Media")) ", " | jsonify }},
   "articleSection": {{ .Params.categories | default "Marketing" | jsonify }},
   "genre": "Marketing Blog",
