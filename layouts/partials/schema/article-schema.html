@@ -1,0 +1,34 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": {{ .Title | jsonify }},
+  "description": {{ .Params.description | default (.Summary | plainify) | jsonify }},
+  "datePublished": "{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}",
+  "dateModified": "{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}",
+  "author": {
+    "@type": "Organization",
+    "name": {{ .Params.author | default .Site.Params.authorName | jsonify }}
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "BaoLiba",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://baoliba.com/logo.png"
+    }
+  },
+  "image": {{ .Params.featuredImage | default "https://baoliba.com/logo.png" | jsonify }},
+  "articleBody": {{ .Content | plainify | jsonify }},
+  "keywords": {{ delimit (.Params.keywords | default (slice)) ", " | jsonify }},
+  "articleSection": {{ .Params.categories | default "" | jsonify }},
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ .Permalink }}"
+  },
+  "inLanguage": "{{ .Params.language | default "en" }}",
+  "countryOfOrigin": {{ .Params.country | default "" | jsonify }},
+  "about": {{ .Params.platform | default "" | jsonify }},
+  "name": {{ .Params.content_type | default "" | jsonify }}
+}
+</script>
