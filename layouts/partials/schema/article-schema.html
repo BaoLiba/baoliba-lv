@@ -28,91 +28,59 @@
   "social-media-marketing" (dict "en" "Social Media Marketing" "lv" "Sociālo mediju mārketings" "zh" "社交媒体营销")
 }}
 
-{{/* ✅ 主平台与类型 */}}
+{{/* ✅ 平台和语言判断 */}}
 {{ $mainPlatform := index (.Params.platforms | default (slice "YouTube")) 0 }}
 {{ $baseType := index $platformTypes $mainPlatform }}
 {{ if not $baseType }}{{ $baseType = "social-media-marketing" }}{{ end }}
 
-{{/* ✅ 多语言翻译 */}}
-{{ $lang := .Params.language | plainify | trim " " }}
-{{ if not $lang }}{{ $lang = "lv" }}{{ end }}
-
+{{ $lang := .Params.language | default "lv" | plainify | trim }}
 {{ $contentTypeMap := index $translatedTypes $baseType }}
-{{ $contentType := "" }}
-{{ if $contentTypeMap }}
-  {{ $contentType = index $contentTypeMap $lang }}
-  {{ if not $contentType }}
-    {{ $contentType = index $contentTypeMap "en" }}
-  {{ end }}
-{{ end }}
-{{ if not $contentType }}{{ $contentType = "Social Media Marketing" }}{{ end }}
+{{ $contentType := index $contentTypeMap $lang | default (index $contentTypeMap "en") | default "Social Media Marketing" }}
 
-{{/* ✅ 其他字段预处理 */}}
-{{ $headline := .Title | plainify | trim " " }}
-{{ if not $headline }}{{ $headline = "Untitled" }}{{ end }}
-
-{{ $desc := .Params.description | default (.Summary) | plainify | trim " " }}
-{{ if not $desc }}{{ $desc = "No description available." }}{{ end }}
-
-{{ $body := .Content | plainify | trim " " }}
-{{ if not $body }}{{ $body = "No article body available." }}{{ end }}
-
-{{ $author := .Params.author | plainify | trim " " }}
-{{ if not $author }}{{ $author = "BaoLiba" }}{{ end }}
-
-{{ $country := .Params.country | plainify | trim " " }}
-{{ if not $country }}{{ $country = "Latvia" }}{{ end }}
-
-{{ $categories := .Params.categories | default "" | plainify | trim " " }}
-{{ if not $categories }}{{ $categories = "Marketing" }}{{ end }}
-
-{{ $about := delimit (.Params.platforms | default (slice "YouTube")) ", " | plainify | trim " " }}
-{{ if not $about }}{{ $about = "YouTube" }}{{ end }}
-
+{{/* ✅ 字段处理 */}}
+{{ $headline := .Title | plainify | trim | default "Untitled" }}
+{{ $desc := .Params.description | default (.Summary | plainify) | trim | default "No description available." }}
+{{ $body := .Content | plainify | trim | default "No article body available." }}
+{{ $author := .Params.author | plainify | trim | default "BaoLiba" }}
+{{ $country := .Params.country | plainify | trim | default "Latvia" }}
+{{ $categories := .Params.categories | default "Marketing" | plainify | trim }}
+{{ $about := delimit (.Params.platforms | default (slice "YouTube")) ", " | plainify | trim | default "YouTube" }}
 {{ $image := .Params.featuredImage | default "https://baoliba.com/logo.png" }}
 {{ $keywords := delimit (apply (.Params.keywords | default (slice)) "plainify" ".") ", " }}
 
 {
   "@context": "https://schema.org",
   "@type": "Article",
-
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": {{ .Permalink | printf "%q" }}
+    "@id": {{ .Permalink | jsonify }}
   },
-
   "headline": {{ $headline | jsonify }},
   "description": {{ $desc | jsonify }},
   "articleBody": {{ $body | jsonify }},
   "keywords": {{ $keywords | jsonify }},
   "articleSection": {{ $categories | jsonify }},
-
   "datePublished": "{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}",
   "dateModified": "{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}",
-
   "author": {
     "@type": "Organization",
     "name": {{ $author | jsonify }}
   },
-
   "publisher": {
     "@type": "Organization",
     "name": "BaoLiba",
     "logo": {
       "@type": "ImageObject",
-      "url": {{ "https://baoliba.com/logo.png" | printf "%q" }}
+      "url": "https://baoliba.com/logo.png"
     }
   },
-
   "image": {
     "@type": "ImageObject",
-    "url": {{ $image | printf "%q" }}
+    "url": {{ $image | jsonify }}
   },
-
   "inLanguage": {{ $lang | jsonify }},
   "countryOfOrigin": {{ $country | jsonify }},
   "about": {{ $about | jsonify }},
   "name": {{ $contentType | jsonify }}
 }
 </script>
-
