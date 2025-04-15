@@ -28,13 +28,15 @@
   "social-media-marketing" (dict "en" "Social Media Marketing" "lv" "Sociālo mediju mārketings" "zh" "社交媒体营销")
 }}
 
-{{/* ✅ 主平台与类型识别 */}}
+{{/* ✅ 主平台与类型 */}}
 {{ $mainPlatform := index (.Params.platforms | default (slice "YouTube")) 0 }}
 {{ $baseType := index $platformTypes $mainPlatform }}
 {{ if not $baseType }}{{ $baseType = "social-media-marketing" }}{{ end }}
 
-{{/* ✅ 多语言内容类型 */}}
-{{ $lang := .Params.language | default "lv" }}
+{{/* ✅ 多语言翻译 */}}
+{{ $lang := .Params.language | plainify | trim " " }}
+{{ if not $lang }}{{ $lang = "lv" }}{{ end }}
+
 {{ $contentTypeMap := index $translatedTypes $baseType }}
 {{ $contentType := "" }}
 {{ if $contentTypeMap }}
@@ -45,14 +47,29 @@
 {{ end }}
 {{ if not $contentType }}{{ $contentType = "Social Media Marketing" }}{{ end }}
 
-{{/* ✅ 图片处理 */}}
-{{ $image := .Params.featuredImage | default "https://baoliba.com/logo.png" }}
+{{/* ✅ 其他字段预处理 */}}
+{{ $headline := .Title | plainify | trim " " }}
+{{ if not $headline }}{{ $headline = "Untitled" }}{{ end }}
 
-{{/* ✅ 作者字段防空处理 */}}
+{{ $desc := .Params.description | default (.Summary) | plainify | trim " " }}
+{{ if not $desc }}{{ $desc = "No description available." }}{{ end }}
+
+{{ $body := .Content | plainify | trim " " }}
+{{ if not $body }}{{ $body = "No article body available." }}{{ end }}
+
 {{ $author := .Params.author | plainify | trim " " }}
 {{ if not $author }}{{ $author = "BaoLiba" }}{{ end }}
 
-{{/* ✅ keywords 安全处理 */}}
+{{ $country := .Params.country | plainify | trim " " }}
+{{ if not $country }}{{ $country = "Latvia" }}{{ end }}
+
+{{ $categories := .Params.categories | default "" | plainify | trim " " }}
+{{ if not $categories }}{{ $categories = "Marketing" }}{{ end }}
+
+{{ $about := delimit (.Params.platforms | default (slice "YouTube")) ", " | plainify | trim " " }}
+{{ if not $about }}{{ $about = "YouTube" }}{{ end }}
+
+{{ $image := .Params.featuredImage | default "https://baoliba.com/logo.png" }}
 {{ $keywords := delimit (apply (.Params.keywords | default (slice)) "plainify" ".") ", " }}
 
 {
@@ -64,11 +81,11 @@
     "@id": {{ .Permalink | printf "%q" }}
   },
 
-  "headline": {{ .Title | default "Untitled" | plainify | trim " " | jsonify }},
-  "description": {{ .Params.description | default (.Summary | plainify) | trim " " | jsonify }},
-  "articleBody": {{ .Content | plainify | trim " " | jsonify }},
+  "headline": {{ $headline | jsonify }},
+  "description": {{ $desc | jsonify }},
+  "articleBody": {{ $body | jsonify }},
   "keywords": {{ $keywords | jsonify }},
-  "articleSection": {{ .Params.categories | default "" | plainify | trim " " | jsonify }},
+  "articleSection": {{ $categories | jsonify }},
 
   "datePublished": "{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}",
   "dateModified": "{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}",
@@ -92,10 +109,10 @@
     "url": {{ $image | printf "%q" }}
   },
 
-  "inLanguage": {{ $lang | plainify | trim " " | jsonify }},
-  "countryOfOrigin": {{ .Params.country | default "Latvia" | plainify | trim " " | jsonify }},
-  "about": {{ delimit (.Params.platforms | default (slice "YouTube")) ", " | plainify | trim " " | jsonify }},
-  "name": {{ $contentType | plainify | trim " " | jsonify }}
+  "inLanguage": {{ $lang | jsonify }},
+  "countryOfOrigin": {{ $country | jsonify }},
+  "about": {{ $about | jsonify }},
+  "name": {{ $contentType | jsonify }}
 }
 </script>
 
