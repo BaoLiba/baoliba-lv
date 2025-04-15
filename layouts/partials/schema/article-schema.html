@@ -26,7 +26,7 @@
     "@type": "WebPage",
     "@id": "{{ .Permalink }}"
   },
-  "inLanguage": "{{ .Params.language | default "en" }}",
+  "inLanguage": "{{ .Params.language | default "lv" }}",
   "countryOfOrigin": {{ .Params.country | default "" | jsonify }},
   "about": {{ .Params.platform | default "" | jsonify }},
   "name": {{ .Params.content_type | default "" | jsonify }}
