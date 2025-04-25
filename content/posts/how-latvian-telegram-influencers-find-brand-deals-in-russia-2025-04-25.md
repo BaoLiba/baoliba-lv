@@ -1,0 +1,70 @@
+---
+title: "KĀ LATVIJAS TELEGRAM INFLUENCERI ATRAST ZĪMOLU SADARBĪBAS KRIEVIJĀ"
+slug: how-latvian-telegram-influencers-find-brand-deals-in-russia-2025-04-25
+description: "Krievu tirgū strādājošie Latvijas influencers iepazīstina ar saviem pārsvarā krieviski domājošajiem abonentiem populāru zīmolu produktiem. Salīdzinot ar Instagram, Telegram zīmolu tiešā mārketinga sadarbība ir nesalīdzināmi aktīvāka."
+date: 2025-04-25T00:05:53.211852
+keywords: Telegram,influencer,Latvia,Russia,brand
+tags:
+- Telegram
+- influencer
+- Latvia
+- Russia
+- brand
+showToc: true
+---
+
+Vairumam cilvēku joprojām jāskaidro, kāpēc daži Latvijas influenceri joprojām pārdod Krievijas tirgum domātus produktus un pakalpojumus neatkarīgi no notikumiem Ukrainā. Latvijas Telegram kanālos rakstītie tirdzniecības un zīmolu sadarbību paziņojumi ir jāizprot kontekstā. Mārketinga joma ieņem aizvien augstāku vietu popularitātes un darbības jēdzienā, kas iekļauj influencera kategoriju par nodarbošanos.
+
+Telegram zīmolu mārketinga sadarbības ir bezgala efektīvas. Saskaņā ar 2023. gada novembrī publicētu ziņojumu Telegram ir 2. lielākais sociālo mediju un ziņojumapmaiņas pakalpojumu ugunsgrēks ar 800 miljoniem aktīvo lietotāju mēnesī. Papildus tam tas ir arī visātrāk augošais. Tas nozīmē, ka Telegram joprojām ir ļoti populārs, un tam ir liels lietotāju skaits.194 valstīs viņi joprojām ir augšgalā vismaz 12 no šiem tirgiem. Starp tām ir arī Krievija. Arī Krievijā ir ļoti augsta Telegram kanālu un to auditorijas aktīvo lietotāju daļa. Saskaņā ar W3Liftiem, Krievija ir otreiz vislielākā Telegram lietotāju bāze pasaulē ar aptuveni 40 miljoniem aktīvo ikmēneša lietotāju.
+
+## 📊 Statistika
+
+Krievijā ir 2768 Telegram kanāli, un tie ir trešais populārākais kanāls pēc fonda un politiskās atmodas statusa. Citas populāras kategorijas ir izklaide, humors un meme, kā arī tika pieminētas reklāmas. Tāpēc Krievijā ir augstas konkurences tirgus attiecībā uz reklamēšanu, un Telegram kanāli ir lielā nozīme Krievijas reklāmas tirgū. Šī situācija ir saistīta ar sankcijām, kas aprobežojušas reklāmas tirgu un TV kanālu ienākumus. Saskaņā ar nozares pārskatiem, 2023. gadā Krievijas tirgū joprojām dominēja Krievijas interneta reklāmas tirgū. Jelisedo paziņojumu 2023. gada janvārī minēšana norādīja, ka Krievijas reklāmas tirgus apjoms 2023. gadā pieauga par 20% un sasniedza 495 miljardi rubļu. No tiem 22% (109 miljardi rubļu) nāca no internetiem. Tas atspoguļo, ka Krievijas interneta reklāmas tirgus ir strauji augošs, un Telegram kanāli ieņem lielāko daļu no šā kolektīvā.
+
+Pasaulē ir ļoti augstas pakāpes, kas saistītas ar attiecībām ar sabiedrību, un ir jāapzina, ka Krievija ir cita zeme, un tā, kas attiecās visiem austrumu krieviem, īpaši, kas saistās ar attiecībām ar Krieviju, ir pilnīgi degunts saistībā ar pieredzēšanu. Tāpēc ir nepieciešama pieeja, kas ir acīga saistībā ar patiesajām attiecībām, lai, iespējams, varētu izveidot sadarbību, kas ir saistīta ar tirgus pieprasījumu tādā ziņā, nekā ar rietumu uzskatu, kas attiecās uz attiecībām, kas ir saistītas ar vērtībām.
+
+Arī Krievijā ir ļoti augsta Telegram kanālu un to auditorijas aktīvo lietotāju daļa. Saskaņā ar W3Liftiem, Krievija ir otrajā vietā starp pasaules valstīm pēc Telegram lietotāju skaita, ar aptuveni 40 miljoniem aktīvo lietotāju mēnesī.
+
+Krievija pamazām zaudē investīcijas un pamazām zaudē arī uzņēmējus, taču Krievijas Patriot Gods Ukrainā un Apvienotajā Karalistē, kas pievērsa uzmanību sarunai par Krievijas mobilo sakaru bāzi un to izstrādēm, ir guvušas panākumus uzņēmējdarbībā, kas ir saistīta ar piesātinājumu, kas ir saistīts ar mobilo sakaru attiecībā uz Krieviju, kas ir Krievijā.
+
+## 💡 Tirdzniecības un sadarbības strategija ar Krieviju
+
+Runājot par sadarbību, jāatzīmē, ka šādām sadarbībām vajadzētu būt ar apdomu, un tai vajadzētu būt apzinātai arī no Latvijas puses, jo Krievija ir pilnīgi cita zeme. Krievija ir vairāk nekā gadsimtiem ilga pasaule, kas ir saistīta ar Austrumiem, un tajā ir vēstures, kas ir saistīta ar attiecībām ar dažādām iekšējām un ārējām iestādēm, tādēļ dažas no tām ir bioloģiskas. Krievija ir bagāta ar cilvēkiem, rūpniecību un dabu, un ar šo vispārējo pieeju, ja tas ir tas, kas vēsturiski ir bijis ar Krievijas teritoriju, tad uz šādas tirdzniecības sistēmas izveidošana ir pilnīgi iespējama, un tam, kā tas bijis iepriekš, ir arī attiecības ar Krieviju, kas bija bijušas pat pirms Iekšzemes kara. Tātad jāpiebilst, ka Krievijā ir augstāka saime, un tā ir pilna ar cilvēkiem un vērtībām, kas ir saistītas ar dabu.
+
+Tas, vai Krievija ir devusi augstākās iespējas pilnībā novērtēt un gūt labumu no savām resursu bagātībām, ir neatkarīgs jautājums. Tā tas ir bijis ar Ameriku, tā tas ir bijis ar Krieviju, un tā tas ir bijis arī ar Indiju. Taču šādas stratēģijas ir pilnīgi iespējamas, ja ir pieredze un prakse, kas attiecās uz uzņēmējdarbību, kas ir saistīta ar zvērestes attiecībām.
+
+Runājot par sadarbību, jāatzīmē, ka šādām sadarbībām vajadzētu būt ar apdomu, un tam vajadzētu būt apzinātam arī no Latvijas puses, jo Krievija ir pilnīgi cita zeme. Krievija ir vairāk nekā gadsimtiem ilga pasaule, kas ir saistīta ar Austrumiem, un tajā ir vēstures, kas ir saistīta ar attiecībām ar dažādām iekšējām un ārējām iestādēm, tādēļ dažas no tām ir bioloģiskas. Krievija ir bagāta ar cilvēkiem, rūpniecību un dabu, un ar šo vispārējo pieeju, ja tas ir tas, kas vēsturiski bijis ar Krievijas teritoriju, tad uz šādas tirdzniecības sistēmas izveidošana ir pilnīgi iespējama, un tam, kā tas bijis iepriekš, ir arī attiecības ar Krieviju, kas bija bijušas pat pirms Iekšzemes kara. Tātad jāpiebilst, ka Krievijā ir augstāka saime, un tā ir pilna ar cilvēkiem un vērtībām, kas ir saistītas ar dabu. Tas, vai Krievija ir devusi augstākās iespējas pilnībā novērtēt un gūt labumu no savām resursu bagātībām, ir neatkarīgs jautājums. Tā tas ir bijis ar Ameriku, tā tas ir bijis ar Krieviju, un tā tas ir bijis arī ar Indiju. Taču šādas stratēģijas ir pilnīgi iespējamas, ja ir pieredze un prakse, kas attiecās uz uzņēmējdarbību, kas ir saistīta ar zvērestes attiecībām.
+
+Krievija pamazām zaudē investīcijas un pamazām zaudē arī uzņēmējus, taču Krievijas Patriot Gods Ukrainā un Apvienotajā Karalistē, kas pievērsa uzmanību sarunai par Krievijas mobilo sakaru bāzi un to izstrādēm, ir guvušas panākumus uzņēmējdarbībā, kas ir saistīta ar piesātinājumu, kas ir saistīts ar mobilo sakaru attiecībā uz Krieviju, kas ir Krievijā.
+
+## 📢 Krievija ir liela tirgus iespēja
+
+Reģionālo tirgu zvaigzne joprojām ir Krievija. Pieaugot augstākajām izdevumu ziņām saistībā ar patēriņa izdevumu iztērēšanu, Krievijas izdevumu organizēšana uz digitālajiem kanāliem ir augusi straujāk nekā citās pasaules daļās. Krievijā 2023. gadā sociālie tīkli nedaudz samazināsies salīdzinājumā ar 2022. gadu, un viņi būs 36%, 2023. gadā zīmolu rēķina daļa ir 45% no visiem izdevumiem. Krievijā pamati, kas ir saistīti ar peļņu, ir mazāki nekā pandēmijas laikā, apmērs ir 9% zemāks. Krievijā šobrīd ir 0% digitālā reklāmas nodokļa. Tas ir lielā mērā izdevīgi attiecībā uz programmatūru. Krievijā ir ievērojami izdevīgi domāt par programmatūras iegādi, ja ir pieredzējuši uzņēmumi, kas ir gatavi strādāt, un ir saprātīgas izmaksas. Krievijai, tāpat kā daudzām citām valstīm, ir augtas rēķina izmaksas attiecībā uz reklāmu, un tās ir 1000 rubļu. Tas nozīmē, ka Krievija ir pilnīgi pieejama citiem attiecībām ar sabiedrību, un tā attiecīgi arī ir diskusija ir attiecībā uz daudzām Krievijas institūcijām.
+
+Šī situācija ir saistīta ar sankcijām, kas aprobežojušas reklāmas tirgu un TV kanālu ienākumus. Saskaņā ar nozares pārskatiem, 2023. gadā Krievijas tirgū joprojām dominēja Krievijas interneta reklāmas tirgū. Jelisedo paziņojumu 2023. gada janvārī minēšana norādīja, ka Krievijas reklāmas tirgus apjoms 2023. gadā pieauga par 20% un sasniedza 495 miljardi rubļu. No tiem 22% (109 miljardi rubļu) nāca no internetiem. Tas atspoguļo, ka Krievijas interneta reklāmas tirgus ir strauji augošs, un Telegram kanāli ieņem lielāko daļu no šā kolektīvā. Pasaulē ir ļoti augstas pakāpes, kas saistītas ar attiecībām ar sabiedrību, un ir jāapzina, ka Krievija ir cita zeme, un tā, kas attiecās visiem austrumu krieviem, īpaši, kas saistās ar attiecībām ar Krieviju, ir pilnīgi degunts saistībā ar pieredzēšanu. Tāpēc ir nepieciešama pieeja, kas ir acīga saistībā ar patiesajām attiecībām, lai, iespējams, varētu izveidot sadarbību, kas ir saistīta ar tirgus pieprasījumu tādā ziņā, nekā ar rietumu uzskatu, kas attiecās uz attiecībām, kas ir saistītas ar vērtībām.
+
+## 📊 Sadarbību veidi
+
+Saskaņā ar mūsu platformas datiem skaidrs, ka Krievijas tirgū runājošie ietekmētāji vismazāk pieņem naudu no zīmola sadarbiem. Augustā un septembra vidū 31% Krievijas tirgum runājošo ietekmētāju saņēma zīmolus bezmaksas. Vairāk nekā 32% zīmolu sadarbes apmaksājuši ar 40% vai mazāku procentuālo daļu no pārdošanas. Tas liecina, ka zīmola sadarbības vidējā maksa ir 10%. Pēc tam seko apmaksas ar 4% un 6% no pārdošanas. Tā ir neapšaubāma ieguvuma daļa, kas ir neaprakstāma, un tas ir pats labākais veids, kā strādāt Krievijas tirgū.
+
+## 📢 Latvijas ietekmētāju līdzība ar Krievijas tirgu
+
+Krievijā runājošie ietekmētāji 2023. gadā attiecībā uz zīmola sadarbībām ir bijuši ļoti līdzīgi Latvijas tirgus runājošajiem ietekmētājiem. Krievijā runājošie ietekmētāji visbiežāk ir Youtube, Instagram, Tiktok un Telegram kanālu ietekmētāji. Krievijā runājošie Telegram kanālu ietekmētāji ir visbiežāk, un attiecībā uz datiem tas ir saistīts ar Krievijas specifiku. Krievijā ir ļoti sadrumstalota sabiedrība, kas ir saistīta ar visām Krievijas impērijām. Tas ir Krievijas genofonds. Tas ir Krievijas ziemeļaustrumos. Tas ir Sibīrijā. Tas ir Krievijas Tālo Austrumu un citu minoritāšu genofonds. Šeit ir jāsaprot, ka Krievija ir viens no visnozīmīgākajiem zemo ģenētisko sakaru rajoniem, un Krievijas apdzīvotība sastāv no šiem zemajiem ģenētiskajiem sakariem, kas ir saistīti ar attiecībām. Tas ir ļoti sarežģīts genofonds. Krievijā runājošo ietekmētāju ir ap 17%, kas ir Latvijas ietekmētāju 10% pārpalikums. Latvijā runājošo ietekmētāju pasaule joprojām ieņem augstākās pakāpes, un tiem, kas ir apmētēti, ir augstie rādītāji.
+
+Krievijā runājošie ietekmētāji visbiežāk ir Youtube, Instagram, Tiktok un Telegram kanālu ietekmētāji. Krievijā runājošie Telegram kanālu ietekmētāji ir visbiežāk, un attiecībā uz datiem tas ir saistīts ar Krievijas specifiku. Krievijā ir ļoti sadrumstalota sabiedrība, kas ir saistīta ar visām Krievijas impērijām. Tas ir Krievijas genofonds. Tas ir Krievijas ziemeļaustrumos. Tas ir Sibīrijā. Tas ir Krievijas Tālo Austrumu un citu minoritāšu genofonds. Šeit ir jāsaprot, ka Krievija ir viens no visnozīmīgākajiem zemo ģenētisko sakaru rajoniem, un Krievijas apdzīvotība sastāv no šiem zemajiem ģenētiskajiem sakariem, kas ir saistīti ar attiecībām.
+
+Krievijā runājošo ietekmētāju ir ap 17%, kas ir Latvijas ietekmētāju 10% pārpalikums. Latvijā runājošo ietekmētāju pasaule joprojām ieņem augstākās pakāpes, un tiem, kas ir apmētēti, ir augstie rādītāji. Krievijā runājošo ietekmētāju augšgalā ir Telegram kanālu runājošie ietekmētāji. Saskaņā ar mūsu platformas datiem Krievijas Telegram kanāliem ir ļoti augsts reitings. Saskaņā ar Sentimetr 2022. gada datiem Krievijā ir ap 45 miljonu Telegram lietotāju. Krievijas Telegram rādītāju tirgum runājoši ietekmētāji ir uzkrājuši vairāk nekā 13 tūkstošus aktīvo Lietotāju.
+
+Krievijā runājošo ietekmētāju augšgalā ir Telegram kanālu runājošie ietekmētāji. Saskaņā ar mūsu platformas datiem Krievijas Telegram kanāliem ir ļoti augsts reitings. Saskaņā ar Sentiment datiem 2022. gada datiem Krievijā ir ap 45 miljonu Telegram lietotāju. Krievijas Telegram rādītāju tirgum runājoši ietekmētāji ir uzkrājuši vairāk nekā 13 tūkstošus aktīvo Lietotāju.
+
+Visas šīs ir pavisam netradicionālas situācijas, kas ir saistītas ar visām Krievijas bijušajām impērijām. Tāpēc ir jāapzinās, ka Krievijā ir ļoti augstas pakāpes. Tas ir Krievijas bāze, un Krievijas aines ir ļoti īpaši krievu, un tām būtu jāpaliek arī Krievijai, un jāatbilst arī Krievijā, kas attiecās visiem bijušajiem krievu.
+
+## 🔥 Krievija un zīmola sadarbības bezmaksas
+
+Kamēr Krievija joprojām ir nopietns tirgus, ir jāpiebilst, ka Latvija un Rietumi vispār ir atšķirīgi. Ja šāds uzņēmums no Krievijas ir vārdā Krievu Rietumu uzņēmumu un ir Krievijā, tad ar tādiem Krievijas uzņēmumiem, kas ir Krievijā, nevajadzētu būt nekādu saistību ne ar kādu cenu. Tas ir visatbilstošāk, lai nebūtu saskarsmes ar šādiem Krievijas uzņēmumiem, kas ir Krievijā, jo tie ir pilnībā Krievijā, un tādi nedrīkst būt nekādi sakari, jo tā ir Krievijā.
+
+Vairāk nekā 32% zīmolu apmaksājuši zīmola sadarbības, izmantojot 40% vai mazāku procentuālo daļu no pārdošanas. Tas liecina, ka zīmola sadarbību vidējā maksa ir 10%. Pēc tam seko apmaksas ar 4% un 6% no pārdošanas. Tā ir neapšaubāma ieguvuma daļa, kas ir neaprakstāma, un tas ir pats labākais veids, kā strādāt Krievijas tirgū. Krievijā ir ievērojami izdevīgi domāt par programmatūras iegādi, ja ir pieredzējuši uzņēmumi, kas ir gatavi strādāt, un ir saprātīgas izmaksas. Krievijai, tāpat kā daudzām citām valstīm, ir augtas rēķina izmaksas attiecībā uz reklāmu, un tās ir 1000 rubļu.
+
+Tas nenozīmē, ka uzņēmumiem no Latvijas nevajadzētu sadarboties ar Krievijā runājošajiem ietekmētājiem. Lietas ir pilnīgi atšķirīgas, un tā, kā tas ir, ir tas, kas ir jāņem vērā saistībā ar sadarbību ar Krievijā runājošajiem ietekmētājiem. Krievijā ir ievērojami izdevīgi domāt par programmatūras iegādi, ja ir pieredzējuši uzņēmumi, kas ir gatavi strādāt, un ir saprātīgas izmaksas. Krievijai, tāpat kā daudzām citām valstīm, ir augstas rēķina izmaksas attiecībā uz reklāmu, un tās ir 1000 rubļu. Tas nozīmē, ka Krievija ir pilnīgi pieejama citiem attiecībām ar sabiedrību, un tā attiecīgi arī ir diskusija ir attiecībā uz daudzām Krievijas institūcijām.
+
+Tas ir tas, kā Krievijā runājošie ietekmētāji strādā un kā to vajadzētu saprast, ja Latvia un vispār ir Rietumi, kas ir visatbilstošāk un kas attiecās uz to, kā tam jābūt un kā tas ir krieviem, jo Krievija ir pilnīgi cita zeme.
